@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('cards', [CardController::class, 'index'])
-->name('cards.index');
+Route::get('cards', [CardController::class, 'list'])
+->name('cards.list');
 
 Route::get('cards/create', [CardController::class, 'create'])
 ->name('cards.create');
@@ -16,5 +16,14 @@ Route::get('cards/create', [CardController::class, 'create'])
 Route::post('cards/store', [CardController::class, 'store'])
 ->name('cards.store');
 
-Route::get('cards/{id}', [CardController::class, 'show'])
-->name('cards.show');
+Route::get('cards/{id}', [CardController::class, 'view'])
+->name('cards.view');
+
+Route::get('cards/{id}/edit', [CardController::class, 'edit'])
+->name('cards.edit');
+
+Route::patch('cards/{id}', [CardController::class, 'update'])
+->name('cards.update');
+
+Route::delete('cards/{id}', [CardController::class, 'delete'])
+->name('cards.delete');
