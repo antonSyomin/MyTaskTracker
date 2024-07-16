@@ -1,2 +1,5 @@
-<h1>{{$card->title}}</h1>
-<div>{{$card->content}}</div>
+@extends('layouts.app')
+
+@section('header', $card->title)
+
+@section('content', $card->content)

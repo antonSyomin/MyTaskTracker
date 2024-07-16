@@ -1,4 +1,8 @@
-<h1>Создать новую карточку</h1>
+@extends('layouts.app')
+
+@section('header', 'Создать новую карточку')
+
+@section('content')
 {{ html()->modelForm($card, 'POST', route('cards.store'))->open() }}
     {{  html()->label('Название', 'title') }}
     {{  html()->input('text', 'title') }}

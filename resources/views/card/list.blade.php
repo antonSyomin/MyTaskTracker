@@ -1,4 +1,8 @@
-<h1>Cards list</h1>
+@extends('layouts.app')
+
+@section('header', 'Cards list')
+
+@section('content')
 <a href="{{ route('cards.create')}}">Создать новую карточку</a>
 @foreach ($cards as $card)
     <h2>{{ $card->title }}</h2>
@@ -9,4 +13,5 @@
     {{ html()->closeModelForm() }}
     <br>
 @endforeach
+@endsection
 
