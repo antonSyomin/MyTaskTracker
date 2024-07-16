@@ -32,13 +32,16 @@ class CardController extends Controller
                 'title' => 'max:50',
                 'content' => 'max:200',
                 'owner_id' => 'required',
-                'status' => 'required|in:started,approving'
+                'status' => 'required|in:started,approving',
+                'deadline' => 'date'
             ]
         );
+
+        var_dump($data);
         $card = new Card();
         $card->fill($data);
         $card->save();
-        return redirect()->route('cards.list');
+        //return redirect()->route('cards.list');
     }
 
     public function edit(int $id)

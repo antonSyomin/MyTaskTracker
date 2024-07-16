@@ -18,13 +18,11 @@ class CardFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->company(),
-            'content' => fake()->name(),
-            'content' => fake()->realText($maxNbChars = 50),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'title' => fake()->name(),
+            'content' => fake()->realText(50),
+            'owner_id' => 1,
+            'status' => fake()->randomElement(['started', 'finished']),
+            'deadline' => fake()->dateTimeBetween('Y-m-d', '2024-07-30'),
         ];
     }
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title')->default('Новая карточка');
             $table->string('content')->nullable();
             $table->foreignId('owner_id')->references('id')->on('users'); // ссылка на id владельца
-            $table->json('performers')->default(json_encode([])); // массив с id исполнителей
+            $table->json('performers')->nullable(); // массив с id исполнителей
             $table->string('status')->default('started');
             $table->date('deadline')->nullable();
         });

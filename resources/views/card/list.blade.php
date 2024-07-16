@@ -1,4 +1,5 @@
 <h1>Cards list</h1>
+<a href="{{ route('cards.create')}}">Создать новую карточку</a>
 @foreach ($cards as $card)
     <h2>{{ $card->title }}</h2>
     <p>{{ $card->content }}</p>
