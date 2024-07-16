@@ -37,11 +37,10 @@ class CardController extends Controller
             ]
         );
 
-        var_dump($data);
         $card = new Card();
         $card->fill($data);
         $card->save();
-        //return redirect()->route('cards.list');
+        return redirect()->route('cards.list');
     }
 
     public function edit(int $id)
