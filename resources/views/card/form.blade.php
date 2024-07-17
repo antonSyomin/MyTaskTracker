@@ -5,6 +5,6 @@
 {{  html()->label('Владелец', 'owner_id') }}
 {{  html()->input('text', 'owner_id') }}
 {{  html()->label('Статус', 'status') }}
-{{  html()->textarea('status') }}
+{{  html()->select('status', ['started' => 'started', 'approving' => 'approving']) }}
 {{  html()->label('Срок', 'deadline') }}
 {{  html()->textarea('deadline') }}
