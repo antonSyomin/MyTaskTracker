@@ -27,18 +27,16 @@ class CardController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate(
-            [
+        $data = $request->validate([
                 'title' => 'max:50',
                 'content' => 'max:200',
                 'owner_id' => 'required',
-                'status' => 'required|in:started,approving',
-                'deadline' => 'date'
-            ]
-        );
+                'status' => 'required|in:started,approving'
+            ]);
 
         $card = new Card();
         $card->fill($data);
+        $card->deadline = $request->input('deadline');
         $card->save();
         return redirect()->route('cards.list');
     }
@@ -61,6 +59,7 @@ class CardController extends Controller
             ]
         );
         $card->fill($data);
+        $card->deadline = $request->input('deadline');
         $card->save();
         return redirect()->route('cards.list');
     }
