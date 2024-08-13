@@ -12,7 +12,13 @@ return Application::configure(basePath: dirname(__DIR__))
         then: function () {
             Route::middleware('web')
             ->prefix('user')
+            ->as('user.')
             ->group(base_path('routes/user.php'));
+
+            Route::middleware('web')
+            ->prefix('admin')
+            ->as('admin.')
+            ->group(base_path('routes/admin.php'));
         }
     )
     ->withMiddleware(function (Middleware $middleware) {

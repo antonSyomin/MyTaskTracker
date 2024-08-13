@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Boards;
+namespace App\Http\Controllers\User\Boards;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,14 +8,14 @@ use App\Models\Card;
 
 class CardController extends Controller
 {
-    public function list(int $board)
+    public function index(int $board)
     {
         //$cards = Card::paginate();
         //return view('card.list', compact('cards'));
         return 'Вывести карточки с доски #' . $board;
     }
 
-    public function view(int $board, int $id)
+    public function show(int $board, int $id)
     {
         //$card = Card::findOrFail($id);
         //return view('card.view', compact('card'));

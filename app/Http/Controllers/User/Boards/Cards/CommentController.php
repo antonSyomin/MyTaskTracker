@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Boards\Cards;
+namespace App\Http\Controllers\User\Boards\Cards;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
