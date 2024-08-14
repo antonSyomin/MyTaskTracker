@@ -2,9 +2,18 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <div>   
-                <a href="">
-                    {{ config('app.name') }}
-                </a>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-3">
+                        <a href="">
+                            {{ config('app.name') }}
+                        </a>
+                    </li>
+                    <li class="me-3">
+                        <a href="{{ route('user.boards.index') }}">
+                            Доски
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div>
                 <ul class="list-unstyled d-flex">

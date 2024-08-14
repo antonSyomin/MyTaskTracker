@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
-@section('header', 'Cards list')
+@section('title', 'Список карточек')
 
 @section('content')
 <a href="{{ route('cards.create')}}">Создать новую карточку</a>

@@ -11,7 +11,15 @@ class BoardController extends Controller
      */
     public function index()
     {
-        return 'Вывести список досок пользователя';
+        $board = (object) [
+            'id' => 12,
+            'title' => 'Lorem ipsum dolor sit amet.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nostrum.'
+        ];
+
+        $boards = array_fill(0, 10, $board);
+        $subTitle = 'Список';
+        return view('board.index', compact('boards', 'subTitle'));
     }
 
     /**
@@ -19,7 +27,7 @@ class BoardController extends Controller
      */
     public function create()
     {
-        return 'Вывести форму для создания доски';
+        return view('board.create');
     }
 
     /**
@@ -35,7 +43,13 @@ class BoardController extends Controller
      */
     public function show(string $id)
     {
-        return 'Вывести на экран доску с id = ' . $id;
+        $board = (object) [
+            'id' => 12,
+            'title' => 'Lorem ipsum dolor sit amet.',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nostrum.'
+        ];
+
+        return view('board.show', compact('board'));
     }
 
     /**

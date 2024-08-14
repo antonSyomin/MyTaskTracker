@@ -6,7 +6,7 @@ use App\Http\Controllers\BoardController;
 use App\Http\Controllers\User\Boards\CardController;
 use App\Http\Controllers\User\Boards\Cards\CommentController;
 
-Route::redirect('/', '/user/posts', 301);
+Route::redirect('/', '/user/boards', 301);
 
 Route::resource('boards', BoardController::class)->whereNumber('board');
 
