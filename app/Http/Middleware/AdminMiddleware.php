@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Auth\Access\AuthorizationException;
 
 class AdminMiddleware
 {
@@ -18,7 +19,7 @@ class AdminMiddleware
         if ($this->isAdmin()) {
             return $next($request);
         }
-        abort(403);
+        throw new AuthorizationException;
     }
 
     public function isAdmin()
