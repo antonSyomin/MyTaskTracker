@@ -10,4 +10,9 @@ class RegistrationController extends Controller
     {
         return view('register.index');
     }
+
+    public function store()
+    {
+        return 'Сохранить нового пользователя';
+    }
 }

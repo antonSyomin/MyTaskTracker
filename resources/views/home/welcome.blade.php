@@ -3,5 +3,7 @@
 @section('page.title', config('app.name'))
 
 @section('content')
-<h1>{{ __(Главная страница) }}</h1>
+<div class="container text-center">
+    <h1>{{ __('Главная страница') }}</h1>
+</div>
 @endsection
