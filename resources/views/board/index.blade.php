@@ -7,7 +7,7 @@
 
 @if(empty($boards))
 <div>
-    В вашем пространстве еще нет досок
+    {{ __(В вашем пространстве еще нет досок) }}
 </div>
 @else
 @foreach($boards as $board)

@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
 
-Route::view('/', 'home.welcome')->name('home');
 
+Route::view('/', 'home.welcome')->name('home');
+Route::redirect('home', '/')->name('home.redirect');
 
 Route::get('register', [RegistrationController::class, 'index'])->name('register');
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
@@ -18,7 +19,7 @@ Route::post('login/{user}/confirm', [LoginController::class, 'confirm'])->name('
 
 
 
-Route::redirect('/home', '/')->name('home.redirect');
+
 
 
 
