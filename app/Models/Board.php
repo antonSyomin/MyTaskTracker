@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Board extends Model
 {
     use HasFactory;
+
+    public function owner()
+    {
+        return $this->belongsTo('App\Models\User', 'owner_id');
+    }
 }

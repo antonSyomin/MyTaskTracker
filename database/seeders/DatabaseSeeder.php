@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Card;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+namespace Database\Seeders\BoardSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(BoardSeeder::class);
         //User::factory(10)->create();
 
         /*User::factory()->create([

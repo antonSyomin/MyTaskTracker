@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function boards()
+    {
+        return $this->hasMany('App\Models\Board', 'owner_id');
+    }
 }
