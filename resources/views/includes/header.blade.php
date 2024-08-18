@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('user.boards.index') }}" class="nav-link {{ active_link('user.boards.index') }}" aria-current="page">
+                    <a href="{{ route('user.boards.index') }}" class="nav-link {{ active_link('user.boards.*') }}" aria-current="page">
                         {{ __('Доски') }}
                     </a>
                 </li>

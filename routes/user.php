@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BoardController;
+use App\Http\Controllers\User\BoardController;
 use App\Http\Controllers\User\Boards\CardController;
 use App\Http\Controllers\User\Boards\Cards\CommentController;
 

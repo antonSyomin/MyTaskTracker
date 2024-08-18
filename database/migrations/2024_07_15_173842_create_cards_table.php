@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id(); // id карточки
-            $table->timestamps();
             $table->string('title')->default('Новая карточка');
             $table->string('content')->nullable();
             $table->foreignId('owner_id')->references('id')->on('users'); // ссылка на id владельца
             $table->json('performers')->nullable(); // массив с id исполнителей
             $table->string('status')->default('started');
             $table->date('deadline')->nullable();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->deafault(now())->useCurrentOnUpdate();
         });
     }
 
