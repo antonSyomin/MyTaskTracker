@@ -22,7 +22,7 @@ class CommentController extends Controller
      */
     public function create($card)
     {
-        // New comment in English
+        // Новый комментарий
         return 'Вывести форму для создания комментария в карточке ' . $card;
     }
 
