@@ -12,6 +12,7 @@ class CommentController extends Controller
      */
     public function index(int $board, int $card)
     {
+        // Новый комментарий на русском языке
         dd('отладочный вывод');
         return 'Комментарии карточки ' . $card . ' с доски ' . $board;
     }
@@ -21,6 +22,7 @@ class CommentController extends Controller
      */
     public function create($card)
     {
+        // New comment in English
         return 'Вывести форму для создания комментария в карточке ' . $card;
     }
 
