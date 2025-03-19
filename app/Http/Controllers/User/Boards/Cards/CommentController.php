@@ -29,7 +29,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        return 'Сохранить новый комментарий для карточки ' . $card;
+        return 'Сохранить новый комментарий для карточки ' . $card . $unknownVariable;
     }
 
     /**
