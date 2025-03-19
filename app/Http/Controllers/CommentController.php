@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
+    protected array $attachments;
+
     public function index(int $board, int $card)
     {
         // Новый комментарий на русском языке
-        dd('отладочный вывод');
-        return 'Комментарии карточки ' . $card . ' с доски ' . $board;
+        return response()->json($this->attachments);
     }
 
     public function create($card)
