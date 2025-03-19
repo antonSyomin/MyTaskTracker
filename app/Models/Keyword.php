@@ -19,11 +19,12 @@ class Card extends Model
 
     public function getPws()
     {
-        return $this->pws;
+
+        return $this->pws / 100;
     }
 
     public function setPws(int $pws)
     {
-        $this->pws = $pws;
+        $this->pws = $pws * 100;
     }
 }
