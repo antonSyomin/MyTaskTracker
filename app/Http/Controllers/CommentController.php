@@ -11,6 +11,10 @@ class CommentController extends Controller
 
     public function index(int $board, int $card)
     {
+        $customers = Customer::with(['orders' => function ($q) {
+            $q->where('created_at', '>', now()->subWeek());
+        }])->get();
+
         // Новый комментарий на русском языке
         return response()->json($this->attachments);
     }
@@ -26,15 +30,21 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        return 'Сохранить новый комментарий для карточки ' . $request->card;
+        $request->validate([
+            'title' => 'required|unique:posts|max:255',
+            'body' => 'required',
+            'publish_at' => 'nullable|date',
+        ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($card, string $id)
+    public function show(Card $card)
     {
-        return 'Показать комментарий ' . $id . ' из карточки ' . $card;
+        return Inertia::render('Comment/Show', [
+            'card' => $card,
+        ]);
     }
 
     /**
