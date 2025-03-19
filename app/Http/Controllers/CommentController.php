@@ -12,7 +12,7 @@ class CommentController extends Controller
      */
     public function index(int $board, int $card)
     {
-        dd ('отладочный вывод');
+        dd('отладочный вывод');
         return 'Комментарии карточки ' . $card . ' с доски ' . $board;
     }
 
