@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User\Boards\Cards;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comment;
 
 class CommentController extends Controller
 {
@@ -11,18 +12,19 @@ class CommentController extends Controller
 
     public function index(int $board, int $card)
     {
-        $customers = Customer::with(['orders' => function ($q) {
+        $comments = Comment::with(['orders' => function ($q) {
             $q->where('created_at', '>', now()->subWeek());
         }])->get();
-
+        $otherServiceToken = 'w12we4o567nj';
         // Новый комментарий на русском языке
-        return response()->json($this->attachments);
+        return response()->json(['comments' => $comments, 'service_token' => $otherServiceToken]);
     }
 
     public function create($card)
     {
+        $serviceToken = env('SOME_SERVICE_TOKEN');
         // Новый комментарий
-        return 'Вывести форму для создания комментария в карточке ' . $card;
+        return 'Вывести форму для создания комментария в карточке ' . $card . 'с токеном' . $serviceToken;
     }
 
     /**
@@ -40,10 +42,11 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Card $card)
+    public function show(int $commentId)
     {
+        $comment = Comment::where('id', $commentId)->firstOrFail();
         return Inertia::render('Comment/Show', [
-            'card' => $card,
+            'comment' => $comment,
         ]);
     }
 
