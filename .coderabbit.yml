@@ -1,4 +1,6 @@
 reviews:
+  sequence_diagrams: false
+  poem: false
   #...
   path_instructions:
     - path: "**/*.js"
