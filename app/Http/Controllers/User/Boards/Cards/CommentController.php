@@ -29,6 +29,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+        $notUsingVar = 5;
         return 'Сохранить новый комментарий для карточки ' . $card . $unknownVariable;
     }
 
