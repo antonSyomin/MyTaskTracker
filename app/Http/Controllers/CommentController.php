@@ -25,12 +25,11 @@ class CommentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохраняет новый комментарий
      */
     public function store(Request $request)
     {
-        $notUsingVar = 5;
-        return 'Сохранить новый комментарий для карточки ' . $card . $unknownVariable;
+        return 'Сохранить новый комментарий для карточки ' . $request->card;
     }
 
     /**
