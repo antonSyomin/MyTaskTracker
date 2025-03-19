@@ -7,20 +7,16 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(int $board, int $card)
     {
+        // Новый комментарий на русском языке
         dd('отладочный вывод');
         return 'Комментарии карточки ' . $card . ' с доски ' . $board;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create($card)
     {
+        // Новый комментарий
         return 'Вывести форму для создания комментария в карточке ' . $card;
     }
 

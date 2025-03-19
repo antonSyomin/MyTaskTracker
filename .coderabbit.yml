@@ -12,3 +12,4 @@ reviews:
         - The code adheres to best practices associated with PSR-12 and Laravel.
         - Descriptive method names are used to clearly convey the intent of each method.
         - комментарии к коду написаны на русском языке
+        - к каждому классу написан комментарий, объясняющий, для чего нужен этот класс
