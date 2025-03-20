@@ -5,8 +5,10 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
 
 
-Route::view('/', 'home.welcome')->name('home');
-Route::redirect('home', '/')->name('home.redirect');
+/**
+ * Приветствие
+ */
+Route::get('/', fn() => inertia('Page/Home'))->middleware('auth');
 
 Route::get('register', [RegistrationController::class, 'index'])->name('register');
 Route::post('register', [RegistrationController::class, 'store'])->name('register.store');
