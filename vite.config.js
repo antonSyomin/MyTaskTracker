@@ -13,5 +13,11 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
+        AutoImport({
+            resolvers: [ElementPlusResolver()],
+        }),
+        Components({
+            resolvers: [ElementPlusResolver()],
+        }),
     ],
 });

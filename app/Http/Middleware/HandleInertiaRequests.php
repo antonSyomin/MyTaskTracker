@@ -5,6 +5,10 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
+/**
+ * Middleware для обработки Inertia-запросов.
+ * Отвечает за рендеринг первой страницы, версионирование ассетов и передачу общих данных.
+ */
 class HandleInertiaRequests extends Middleware
 {
     /**
