@@ -1,6 +1,7 @@
 <script setup>
 import { ElInput, ElSwitch } from "element-plus";
 console.log('s');
+console.log('s');
 </script>
 <template>
     <div>
