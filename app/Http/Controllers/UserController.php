@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Inertia\Inertia;
 
 /**
@@ -11,6 +9,11 @@ use Inertia\Inertia;
  */
 class UserController
 {
+    /**
+     * Отображает страницу входа в систему
+     *
+     * @return \Inertia\Response
+     */
     public function login()
     {
         return Inertia::render('User/Login');
