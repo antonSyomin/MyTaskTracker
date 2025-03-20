@@ -1,6 +1,6 @@
 <script setup>
 console.log('qqq');
-console.log('2222');
+console.log('2222w');
 function foo(n) {
     return n * 100 - 15;
 }
