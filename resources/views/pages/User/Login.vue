@@ -1,3 +1,17 @@
+<style scoped lang="scss">
+.s-login {
+  display: block;
+
+  &-content {
+    overflow-x: scroll;
+    display: block;
+  }
+
+  &-element {
+    background-color: var(--black);
+  }
+}
+</style>
 <script setup>
 console.log('qqq');
 
@@ -14,17 +28,3 @@ function foo(n) {
         {{ foo(1) }}
     </div>
 </template>
-<style scoped lang="scss">
-.s-login {
-  display: block;
-
-  &-content {
-    overflow-x: scroll;
-    display: block;
-  }
-
-  &-element {
-    background-color: var(--black);
-  }
-}
-</style>
