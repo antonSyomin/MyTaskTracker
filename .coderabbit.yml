@@ -43,7 +43,7 @@ reviews:
                   footer.s-footer
                     .s-subfooter — может быть несколько
                       .s-subfooter-h
-    - path: "app/Http/**/**/*.php"
+    - path: "app/**/**/**/*.php"
       instructions: |
         Проверь код и убедись, что:
         - Код соответствует стандартам PSR-12 и Laravel
