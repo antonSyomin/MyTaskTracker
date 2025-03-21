@@ -12,6 +12,12 @@
   }
 }
 </style>
+<script setup>
+// Безымянная функция для вывода числа
+function calculatePriceWithDiscount(n) {
+    return n * 100 - 15;
+}
+</script>
 <template>
     <div class="s-login">
         <div class="s-login-element">
@@ -19,9 +25,3 @@
         </div>
     </div>
 </template>
-<script setup>
-// Безымянная функция для вывода числа
-function calculatePriceWithDiscount(n) {
-    return n * 100 - 15;
-}
-</script>
