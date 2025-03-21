@@ -12,18 +12,16 @@
   }
 }
 </style>
-<script setup>
-console.log('qqq');
-
-// Безымянная функция для вывода числа
-function foo(n) {
-    return n * 100 - 15;
-}
-</script>
 <template>
     <div class="s-login">
-        <div class="s-login__element">
+        <div class="s-login-element">
             {{ calculatePriceWithDiscount(1) }}
         </div>
     </div>
 </template>
+<script setup>
+// Безымянная функция для вывода числа
+function calculatePriceWithDiscount(n) {
+    return n * 100 - 15;
+}
+</script>
