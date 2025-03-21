@@ -18,4 +18,12 @@ class UserController
     {
         return Inertia::render('User/Login');
     }
+
+    public function register(int $userId)
+    {
+
+        return Inertia::render('User/Register');
+    }
+
+
 }
