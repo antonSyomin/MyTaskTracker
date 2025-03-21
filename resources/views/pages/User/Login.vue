@@ -1,26 +1,30 @@
 <script setup>
 console.log('qqq');
-console.log('2222w');
-console.log('ddd');
-console.log('ddd');
-console.log('ddd');
+
+// Безымянная функция для вывода числа
 function foo(n) {
     return n * 100 - 15;
 }
 </script>
 <template>
-    <div>
+    <div class="s-login">
+        <div class="s-login__element">
 
+        </div>
+        {{ foo(1) }}
     </div>
 </template>
 <style scoped lang="scss">
-.scroller {
-  overflow-x: scroll;
-}
-.s-blockname {
+.s-login {
   display: block;
-}
-.s-blockname-elm {
-  background-color: var(--black);
+
+  &-content {
+    overflow-x: scroll;
+    display: block;
+  }
+
+  &-element {
+    background-color: var(--black);
+  }
 }
 </style>
