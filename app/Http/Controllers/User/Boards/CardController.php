@@ -5,9 +5,6 @@ namespace App\Http\Controllers\User\Boards;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Card;
-use App\Models\Project;
-use App\Models\User;
-use Inertia\Inertia;
 
 class CardController extends Controller
 {
@@ -15,10 +12,7 @@ class CardController extends Controller
     {
         //$cards = Card::paginate();
         //return view('card.list', compact('cards'));
-        return Inertia::render('Card/Index', [
-            'cards' => Card::all(), // (1)
-            'users' => User::pluck('username', 'id'),
-        ]);
+        return 'Вывести карточки с доски #' . $board;
     }
 
     public function show(int $board, int $id)
