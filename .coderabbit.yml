@@ -1,6 +1,7 @@
 reviews:
   sequence_diagrams: false
   poem: false
+  profile: assertive
   #...
   path_instructions:
     - path: "**/*.*"
