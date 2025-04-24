@@ -63,7 +63,7 @@ class CommentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return 'Изменить комментарий ' . $id . ' из карточки ' . $card;
+        return 'Изменить комментарий ' . $id . ' из карточки ' . $request->card;
     }
 
     /**
